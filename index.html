@@ -4,38 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vennila G - IT Professional</title>
+    <title>Vennila G - IT Professional Portfolio</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        /* General Styles */
+        /* Global Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
+            background-color: #f8f9fa;
             color: #333;
         }
 
-        .hero-section {
-            background-color: #F1C6D0;
+        header {
+            background: linear-gradient(to right, #ff7f50, #ff6f61);
+            color: white;
             padding: 80px 0;
-            animation: fadeIn 2s ease-in-out;
+            text-align: center;
         }
 
-        .hero-section h1 {
+        header h1 {
             font-size: 50px;
-            margin-bottom: 20px;
-            animation: slideIn 1s ease-out;
-        }
-
-        .hero-section p {
-            font-size: 18px;
             animation: fadeIn 2s ease-in-out;
         }
 
-        /* Fade-in Effect */
+        header p {
+            font-size: 20px;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Fade-in Animation */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -46,115 +48,174 @@
             }
         }
 
-        /* Slide-in Effect */
-        @keyframes slideIn {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        /* Navbar */
+        .navbar {
+            background-color: #333;
+            padding: 1rem 0;
         }
 
-        /* Hover Color Transition */
-        .nav-link {
-            transition: color 0.3s ease-in-out;
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-size: 18px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
         }
 
-        .nav-link:hover {
-            color: #F39C12;
+        .navbar-nav .nav-link:hover {
+            color: #ff7f50;
         }
 
-        .btn-primary {
-            background-color: #F39C12;
-            border: none;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .btn-primary:hover {
-            background-color: #D35400;
-        }
-
-        .hero-section h1, .hero-section p {
-            color: #8B4D59;
+        .navbar-brand {
+            color: #ff7f50;
+            font-size: 24px;
+            font-weight: 700;
         }
 
         /* About Section */
         #about {
-            background-color: #FFFFFF;
-            padding: 60px 0;
+            padding: 80px 0;
+            background-color: #fff;
             animation: fadeIn 3s ease-in-out;
+        }
+
+        #about h2 {
+            color: #ff6f61;
+            text-align: center;
+            font-size: 36px;
         }
 
         #about p {
             font-size: 18px;
             color: #555;
+            text-align: center;
+            line-height: 1.6;
         }
 
         /* Skills Section */
         #skills {
-            background-color: #FDEFF2;
-            padding: 60px 0;
-            animation: fadeIn 3s ease-in-out;
+            padding: 80px 0;
+            background-color: #f7f7f7;
+            animation: fadeIn 4s ease-in-out;
         }
 
-        #skills h5 {
-            font-weight: bold;
-            color: #E74C3C;
-            animation: dropDown 1s ease-out;
+        #skills h2 {
+            color: #ff6f61;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
         }
 
-        #skills ul {
-            list-style-type: none;
-            padding-left: 0;
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        #skills ul li {
-            font-size: 18px;
-            margin-bottom: 8px;
-            color: #333;
+        .skill-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: scale(1.05);
+        }
+
+        .skill-item h4 {
+            color: #ff6f61;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .skill-item p {
+            font-size: 16px;
+            color: #555;
         }
 
         /* Education Section */
         #education {
-            background-color: #F7F7F7;
-            padding: 60px 0;
-            animation: fadeIn 4s ease-in-out;
+            padding: 80px 0;
+            background-color: #fff;
+            animation: fadeIn 5s ease-in-out;
         }
 
-        #education h5 {
-            color: #E74C3C;
+        #education h2 {
+            color: #ff6f61;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
         }
 
         .education-item {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .education-item h5 {
+            color: #ff6f61;
+            font-size: 24px;
+        }
+
+        .education-item p {
+            font-size: 18px;
+            color: #555;
         }
 
         /* Contact Section */
+        #contact {
+            padding: 80px 0;
+            background-color: #f7f7f7;
+            animation: fadeIn 6s ease-in-out;
+        }
+
+        #contact h2 {
+            color: #ff6f61;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
         #contact form {
             max-width: 600px;
             margin: 0 auto;
-            animation: fadeIn 3s ease-in-out;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         #contact .form-group label {
-            font-size: 16px;
-            color: #333;
+            color: #555;
         }
 
         #contact .form-control {
-            font-size: 16px;
-            padding: 10px;
             border-radius: 5px;
-            border: 1px solid #E74C3C;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
         }
 
         #contact .form-control:focus {
-            border-color: #F39C12;
-            box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+            border-color: #ff7f50;
+            box-shadow: 0 0 5px rgba(255, 127, 80, 0.5);
+        }
+
+        #contact .btn {
+            background-color: #ff7f50;
+            color: white;
+            font-size: 18px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact .btn:hover {
+            background-color: #e05a3d;
         }
 
         /* Footer */
@@ -163,60 +224,23 @@
             color: white;
             padding: 20px 0;
             text-align: center;
-            animation: fadeIn 4s ease-in-out;
         }
-
-        /* Dropping Animation for Skills */
-        @keyframes dropDown {
-            0% {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Hover Effects */
-        .nav-link:hover {
-            color: #F39C12;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .btn:hover {
-            background-color: #F39C12;
-            transition: all 0.3s ease-in-out;
-            transform: scale(1.1);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 40px;
-            }
-
-            .hero-section p {
-                font-size: 16px;
-            }
-        }
-
     </style>
 </head>
 
 <body>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Vennila G - IT Professional</a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Vennila G</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#about">About Me</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#skills">Skills</a>
@@ -232,75 +256,59 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-section text-center text-white">
+    <header>
         <div class="container">
-            <h1 class="display-4">Hi, I'm Vennila</h1>
-            <p class="lead">A Passionate IT Professional and Data Science Enthusiast</p>
+            <h1>Hi, I'm Vennila</h1>
+            <p>A Passionate IT Professional & Data Science Enthusiast</p>
         </div>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
+    <section id="about">
         <div class="container">
-            <h2 class="text-center mb-4">Career Objective</h2>
-            <p class="lead text-center">To advance my career by obtaining a position where I can utilize my knowledge, skills, and experience in troubleshooting, system administration, and technical support, while contributing to the growth of the organization.</p>
+            <h2>Career Objective</h2>
+            <p>To advance my career by obtaining a position where I can utilize my knowledge, skills, and experience
+                in troubleshooting, system administration, and technical support, while contributing to the growth of
+                the organization.</p>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="bg-light py-5">
+    <section id="skills">
         <div class="container">
-            <h2 class="text-center mb-4">Technical Skills</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Operating Systems</h5>
-                    <ul>
-                        <li>Linux (CentOS, RedHat, Rocky)</li>
-                    </ul>
+            <h2>Technical Skills</h2>
+            <div class="skill-list">
+                <div class="skill-item">
+                    <h4>Operating Systems</h4>
+                    <p>Linux (CentOS, RedHat, Rocky)</p>
                 </div>
-                <div class="col-md-4">
-                    <h5>Package Management</h5>
-                    <ul>
-                        <li>YUM, RPM, DNF</li>
-                    </ul>
+                <div class="skill-item">
+                    <h4>Programming Languages</h4>
+                    <p>Python, HTML, CSS</p>
                 </div>
-                <div class="col-md-4">
-                    <h5>Networking</h5>
-                    <ul>
-                        <li>TCP/IP and UDP protocols</li>
-                    </ul>
+                <div class="skill-item">
+                    <h4>Networking</h4>
+                    <p>TCP/IP, UDP</p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Web Development</h5>
-                    <ul>
-                        <li>HTML, CSS, Bootstrap</li>
-                    </ul>
+                <div class="skill-item">
+                    <h4>Database Management</h4>
+                    <p>MySQL</p>
                 </div>
-                <div class="col-md-4">
-                    <h5>Containerization & Orchestration</h5>
-                    <ul>
-                        <li>Docker, Kubernetes</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Programming</h5>
-                    <ul>
-                        <li>Python</li>
-                    </ul>
+                <div class="skill-item">
+                    <h4>Containerization</h4>
+                    <p>Docker, Kubernetes</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="py-5">
+    <section id="education">
         <div class="container">
-            <h2 class="text-center mb-4">Education</h2>
+            <h2>Education</h2>
             <div class="education-item">
                 <h5>Bachelor of Vocation in IT and Data Science</h5>
-                <p><strong>University:</strong> Dayananda Sagar University</p>
+                <p><strong>Institution:</strong> Dayananda Sagar University</p>
                 <p><strong>Year of Passing:</strong> 2024</p>
                 <p><strong>CGPA:</strong> 9.39</p>
             </div>
@@ -314,9 +322,9 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
+    <section id="contact">
         <div class="container">
-            <h2 class="text-center mb-4">Contact</h2>
+            <h2>Contact Me</h2>
             <form>
                 <div class="form-group">
                     <label for="name">Name</label>
@@ -330,7 +338,7 @@
                     <label for="message">Message</label>
                     <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+                <button type="submit" class="btn">Send Message</button>
             </form>
         </div>
     </section>
