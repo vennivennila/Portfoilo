@@ -1,6 +1,192 @@
 <!DOCTYPE html>
-<title>Sample</title>
-<body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vennila's Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-    <H1>Hello this is Me</H1>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero-section {
+            background-color: #2c3e50;
+            padding: 80px 0;
+        }
+
+        .hero-section h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+        }
+
+        /* About Section */
+        #about {
+            background-color: #f8f9fa;
+        }
+
+        #about p {
+            font-size: 18px;
+        }
+
+        /* Skills Section */
+        #skills h5 {
+            font-weight: bold;
+        }
+
+        #skills ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #skills ul li {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        /* Contact Section */
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact .form-group label {
+            font-size: 16px;
+        }
+
+        #contact .form-control {
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        footer {
+            background-color: #333;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 40px;
+            }
+
+            .hero-section p {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Vennila's Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center text-white">
+        <div class="container">
+            <h1 class="display-4">Hi, I'm Vennila</h1>
+            <p class="lead">A Passionate IT Professional and Data Science Enthusiast</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Me</h2>
+            <p class="lead">I am Vennila from Bangalore. I have completed my Diploma in Information Technology and Data Science from Nettur Technical Training Foundation, Electronic City. Alongside my diploma, I pursued a Bachelor's degree in the same field at Dayananda Sagar University, graduating with a cumulative percentage of 9.3.</p>
+            <p>During my academic journey, I gained hands-on experience with various programming languages and tools, including HTML, CSS, Python, Linux, and Bootstrap. I have also worked with tools like Visual Studio and VMware. Additionally, I have experience in building static and responsive websites, which strengthened my understanding of front-end development.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Skills</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Programming Languages</h5>
+                    <ul>
+                        <li>Python</li>
+                        <li>HTML & CSS</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Tools & Technologies</h5>
+                    <ul>
+                        <li>Bootstrap</li>
+                        <li>Visual Studio</li>
+                        <li>VMware</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Web Development</h5>
+                    <ul>
+                        <li>Responsive Web Design</li>
+                        <li>Static Websites</li>
+                        <li>Front-end Development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Me</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3 text-center">
+        <p>&copy; 2024 Vennila. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+</html>
