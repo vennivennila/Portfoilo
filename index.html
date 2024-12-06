@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vennila's Portfolio</title>
+    <title>Vennila G - IT Professional</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
@@ -118,6 +118,21 @@
             color: #333;
         }
 
+        /* Education Section */
+        #education {
+            background-color: #F7F7F7;
+            padding: 60px 0;
+            animation: fadeIn 4s ease-in-out;
+        }
+
+        #education h5 {
+            color: #E74C3C;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+        }
+
         /* Contact Section */
         #contact form {
             max-width: 600px;
@@ -193,7 +208,7 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Vennila's Portfolio</a>
+        <a class="navbar-brand" href="#">Vennila G - IT Professional</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -205,6 +220,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
@@ -224,47 +242,73 @@
     <!-- About Section -->
     <section id="about" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">About Me</h2>
-            <p class="lead">I am Vennila from Bangalore. I have completed my Diploma in Information Technology and Data
-                Science from Nettur Technical Training Foundation, Electronic City. Alongside my diploma, I pursued a
-                Bachelor's degree in the same field at Dayananda Sagar University, graduating with a cumulative percentage
-                of 9.3.</p>
-            <p>During my academic journey, I gained hands-on experience with various programming languages and tools,
-                including HTML, CSS, Python, Linux, and Bootstrap. I have also worked with tools like Visual Studio and
-                VMware. Additionally, I have experience in building static and responsive websites, which strengthened my
-                understanding of front-end development.</p>
+            <h2 class="text-center mb-4">Career Objective</h2>
+            <p class="lead text-center">To advance my career by obtaining a position where I can utilize my knowledge, skills, and experience in troubleshooting, system administration, and technical support, while contributing to the growth of the organization.</p>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="bg-light py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Skills</h2>
+            <h2 class="text-center mb-4">Technical Skills</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <h5>Programming Languages</h5>
+                    <h5>Operating Systems</h5>
                     <ul>
-                        <li>Python</li>
-                        <li>HTML & CSS</li>
-                        <li>Linux</li>
+                        <li>Linux (CentOS, RedHat, Rocky)</li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5>Tools & Technologies</h5>
+                    <h5>Package Management</h5>
                     <ul>
-                        <li>Bootstrap</li>
-                        <li>Visual Studio</li>
-                        <li>VMware</li>
+                        <li>YUM, RPM, DNF</li>
                     </ul>
                 </div>
+                <div class="col-md-4">
+                    <h5>Networking</h5>
+                    <ul>
+                        <li>TCP/IP and UDP protocols</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-4">
                     <h5>Web Development</h5>
                     <ul>
-                        <li>Responsive Web Design</li>
-                        <li>Static Websites</li>
-                        <li>Front-end Development</li>
+                        <li>HTML, CSS, Bootstrap</li>
                     </ul>
                 </div>
+                <div class="col-md-4">
+                    <h5>Containerization & Orchestration</h5>
+                    <ul>
+                        <li>Docker, Kubernetes</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Programming</h5>
+                    <ul>
+                        <li>Python</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Education</h2>
+            <div class="education-item">
+                <h5>Bachelor of Vocation in IT and Data Science</h5>
+                <p><strong>University:</strong> Dayananda Sagar University</p>
+                <p><strong>Year of Passing:</strong> 2024</p>
+                <p><strong>CGPA:</strong> 9.39</p>
+            </div>
+            <div class="education-item">
+                <h5>Diploma in IT and Data Science</h5>
+                <p><strong>Institution:</strong> Nettur Technical Training Foundation</p>
+                <p><strong>Year of Passing:</strong> 2024</p>
+                <p><strong>CGPA:</strong> 9.24</p>
             </div>
         </div>
     </section>
@@ -272,30 +316,28 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Contact Me</h2>
+            <h2 class="text-center mb-4">Contact</h2>
             <form>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                    </div>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email">
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
                     <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Vennila. All Rights Reserved.</p>
+        <p>&copy; 2024 Vennila G. All Rights Reserved.</p>
     </footer>
 
     <!-- Bootstrap JS, Popper.js, jQuery -->
