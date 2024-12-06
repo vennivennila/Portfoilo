@@ -15,12 +15,12 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
+            background-color: #f0f4f8;
             color: #333;
             overflow-x: hidden;
         }
 
-        /* Moving Background */
+        /* Moving IT-Themed Background */
         .moving-background {
             position: absolute;
             top: 0;
@@ -43,17 +43,20 @@
             }
         }
 
-        /* Header */
+        /* Header Section */
         header {
-            background: linear-gradient(to right, #ff66b2, #ff80bf);
+            background: linear-gradient(to right, #4e73df, #1cc88a);
             color: white;
             padding: 80px 0;
             text-align: center;
             position: relative;
+            z-index: 1;
         }
 
         header h1 {
             font-size: 60px;
+            color: #ffffff;
+            font-weight: bold;
             animation: fadeIn 2s ease-in-out;
         }
 
@@ -88,11 +91,11 @@
         }
 
         .navbar-nav .nav-link:hover {
-            color: #ff66b2;
+            color: #1cc88a;
         }
 
         .navbar-brand {
-            color: #ff66b2;
+            color: #4e73df;
             font-size: 24px;
             font-weight: 700;
         }
@@ -105,7 +108,7 @@
         }
 
         #about h2 {
-            color: #ff66b2;
+            color: #4e73df;
             text-align: center;
             font-size: 36px;
         }
@@ -125,7 +128,7 @@
         }
 
         #skills h2 {
-            color: #ff66b2;
+            color: #4e73df;
             text-align: center;
             font-size: 36px;
             margin-bottom: 40px;
@@ -152,7 +155,7 @@
         }
 
         .skill-item h4 {
-            color: #ff66b2;
+            color: #4e73df;
             font-size: 24px;
             margin-bottom: 10px;
         }
@@ -170,7 +173,7 @@
         }
 
         #education h2 {
-            color: #ff66b2;
+            color: #4e73df;
             text-align: center;
             font-size: 36px;
             margin-bottom: 40px;
@@ -181,7 +184,7 @@
         }
 
         .education-item h5 {
-            color: #ff66b2;
+            color: #4e73df;
             font-size: 24px;
         }
 
@@ -198,7 +201,7 @@
         }
 
         #contact h2 {
-            color: #ff66b2;
+            color: #4e73df;
             text-align: center;
             font-size: 36px;
             margin-bottom: 40px;
@@ -225,12 +228,12 @@
         }
 
         #contact .form-control:focus {
-            border-color: #ff66b2;
-            box-shadow: 0 0 5px rgba(255, 102, 178, 0.5);
+            border-color: #4e73df;
+            box-shadow: 0 0 5px rgba(78, 115, 223, 0.5);
         }
 
         #contact .btn {
-            background-color: #ff66b2;
+            background-color: #4e73df;
             color: white;
             font-size: 18px;
             padding: 12px 20px;
@@ -241,7 +244,7 @@
         }
 
         #contact .btn:hover {
-            background-color: #e05a3d;
+            background-color: #375a7f;
         }
 
         /* Footer */
@@ -250,6 +253,64 @@
             color: white;
             padding: 20px 0;
             text-align: center;
+        }
+
+        /* Smiley Emoji Animation */
+        .smiley-emoji {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 50px;
+            animation: smileyAnimation 1s infinite alternate;
+        }
+
+        @keyframes smileyAnimation {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Full color for name */
+        .name {
+            font-size: 60px;
+            color: #1cc88a;
+            font-weight: bold;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .name:hover {
+            color: #4e73df;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 45px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            #about h2,
+            #skills h2,
+            #education h2,
+            #contact h2 {
+                font-size: 28px;
+            }
+
+            .skill-item {
+                width: 200px;
+            }
         }
     </style>
 </head>
@@ -287,18 +348,23 @@
     <!-- Hero Section -->
     <header>
         <div class="container">
-            <h1>Hi, I'm Vennila</h1>
+            <h1 class="name">Vennila G</h1>
             <p>A Passionate IT Professional & Data Science Enthusiast</p>
         </div>
     </header>
+
+    <!-- Smiley Emoji Animation -->
+    <div class="smiley-emoji">
+        😊
+    </div>
 
     <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2>Career Objective</h2>
-            <p>To advance my career by obtaining a position where I can utilize my knowledge, skills, and experience
-                in troubleshooting, system administration, and technical support, while contributing to the growth of
-                the organization.</p>
+            <p>To advance my career by obtaining a position where I can utilize my knowledge, skills, and experience in
+                troubleshooting, system administration, and technical support, while contributing to the growth of the
+                organization.</p>
         </div>
     </section>
 
@@ -309,19 +375,15 @@
             <div class="skill-list">
                 <div class="skill-item">
                     <h4>Operating Systems</h4>
-                    <p>Linux (CentOS, RedHat, Rocky)</p>
+                    <p>Linux (CentOS, RedHat, Rocky), Windows</p>
                 </div>
                 <div class="skill-item">
-                    <h4>Programming</h4>
-                    <p>Python</p>
+                    <h4>Programming Languages</h4>
+                    <p>HTML, CSS, Python</p>
                 </div>
                 <div class="skill-item">
-                    <h4>Web Development</h4>
-                    <p>HTML, CSS, Bootstrap</p>
-                </div>
-                <div class="skill-item">
-                    <h4>Tools</h4>
-                    <p>Visual Studio, VMware</p>
+                    <h4>Tools & Technologies</h4>
+                    <p>Bootstrap, Visual Studio, VMware</p>
                 </div>
             </div>
         </div>
@@ -332,16 +394,12 @@
         <div class="container">
             <h2>Education</h2>
             <div class="education-item">
-                <h5>Bachelor of Vocation in IT & Data Science</h5>
-                <p><strong>Institution:</strong> Dayananda Sagar University</p>
-                <p><strong>Year of Passing:</strong> 2024</p>
-                <p><strong>CGPA:</strong> 9.39</p>
+                <h5>Bachelor of Vocation</h5>
+                <p>Dayananda Sagar University, 2024 | CGPA: 9.3</p>
             </div>
             <div class="education-item">
-                <h5>Diploma in IT and Data Science</h5>
-                <p><strong>Institution:</strong> Nettur Technical Training Foundation</p>
-                <p><strong>Year of Passing:</strong> 2024</p>
-                <p><strong>CGPA:</strong> 9.24</p>
+                <h5>Diploma in IT & Data Science</h5>
+                <p>Nettur Technical Training Foundation, 2024 | CGPA: 9.24</p>
             </div>
         </div>
     </section>
@@ -352,30 +410,26 @@
             <h2>Contact Me</h2>
             <form>
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="name">Your Name</label>
                     <input type="text" class="form-control" id="name" placeholder="Your Name">
                 </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
                     <input type="email" class="form-control" id="email" placeholder="Your Email">
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
+                <button type="submit" class="btn">Submit</button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Vennila G. All Rights Reserved.</p>
+        <p>&copy; 2024 Vennila G. All rights reserved.</p>
     </footer>
 
-    <!-- Bootstrap JS, Popper.js, jQuery -->
+    <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
