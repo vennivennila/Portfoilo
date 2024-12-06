@@ -15,19 +15,45 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
+            background-color: #f7f7f7;
             color: #333;
+            overflow-x: hidden;
         }
 
+        /* Moving Background */
+        .moving-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/virus.png');
+            background-repeat: repeat;
+            z-index: -1;
+            animation: moveBackground 20s infinite linear;
+        }
+
+        @keyframes moveBackground {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        /* Header */
         header {
-            background: linear-gradient(to right, #ff7f50, #ff6f61);
+            background: linear-gradient(to right, #ff66b2, #ff80bf);
             color: white;
             padding: 80px 0;
             text-align: center;
+            position: relative;
         }
 
         header h1 {
-            font-size: 50px;
+            font-size: 60px;
             animation: fadeIn 2s ease-in-out;
         }
 
@@ -62,11 +88,11 @@
         }
 
         .navbar-nav .nav-link:hover {
-            color: #ff7f50;
+            color: #ff66b2;
         }
 
         .navbar-brand {
-            color: #ff7f50;
+            color: #ff66b2;
             font-size: 24px;
             font-weight: 700;
         }
@@ -79,7 +105,7 @@
         }
 
         #about h2 {
-            color: #ff6f61;
+            color: #ff66b2;
             text-align: center;
             font-size: 36px;
         }
@@ -99,7 +125,7 @@
         }
 
         #skills h2 {
-            color: #ff6f61;
+            color: #ff66b2;
             text-align: center;
             font-size: 36px;
             margin-bottom: 40px;
@@ -126,7 +152,7 @@
         }
 
         .skill-item h4 {
-            color: #ff6f61;
+            color: #ff66b2;
             font-size: 24px;
             margin-bottom: 10px;
         }
@@ -144,7 +170,7 @@
         }
 
         #education h2 {
-            color: #ff6f61;
+            color: #ff66b2;
             text-align: center;
             font-size: 36px;
             margin-bottom: 40px;
@@ -155,7 +181,7 @@
         }
 
         .education-item h5 {
-            color: #ff6f61;
+            color: #ff66b2;
             font-size: 24px;
         }
 
@@ -172,7 +198,7 @@
         }
 
         #contact h2 {
-            color: #ff6f61;
+            color: #ff66b2;
             text-align: center;
             font-size: 36px;
             margin-bottom: 40px;
@@ -199,12 +225,12 @@
         }
 
         #contact .form-control:focus {
-            border-color: #ff7f50;
-            box-shadow: 0 0 5px rgba(255, 127, 80, 0.5);
+            border-color: #ff66b2;
+            box-shadow: 0 0 5px rgba(255, 102, 178, 0.5);
         }
 
         #contact .btn {
-            background-color: #ff7f50;
+            background-color: #ff66b2;
             color: white;
             font-size: 18px;
             padding: 12px 20px;
@@ -229,6 +255,9 @@
 </head>
 
 <body>
+
+    <!-- Moving Background -->
+    <div class="moving-background"></div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -283,20 +312,16 @@
                     <p>Linux (CentOS, RedHat, Rocky)</p>
                 </div>
                 <div class="skill-item">
-                    <h4>Programming Languages</h4>
-                    <p>Python, HTML, CSS</p>
+                    <h4>Programming</h4>
+                    <p>Python</p>
                 </div>
                 <div class="skill-item">
-                    <h4>Networking</h4>
-                    <p>TCP/IP, UDP</p>
+                    <h4>Web Development</h4>
+                    <p>HTML, CSS, Bootstrap</p>
                 </div>
                 <div class="skill-item">
-                    <h4>Database Management</h4>
-                    <p>MySQL</p>
-                </div>
-                <div class="skill-item">
-                    <h4>Containerization</h4>
-                    <p>Docker, Kubernetes</p>
+                    <h4>Tools</h4>
+                    <p>Visual Studio, VMware</p>
                 </div>
             </div>
         </div>
@@ -307,7 +332,7 @@
         <div class="container">
             <h2>Education</h2>
             <div class="education-item">
-                <h5>Bachelor of Vocation in IT and Data Science</h5>
+                <h5>Bachelor of Vocation in IT & Data Science</h5>
                 <p><strong>Institution:</strong> Dayananda Sagar University</p>
                 <p><strong>Year of Passing:</strong> 2024</p>
                 <p><strong>CGPA:</strong> 9.39</p>
