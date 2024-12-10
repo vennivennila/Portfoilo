@@ -74,33 +74,32 @@ body {
     background: #121212; /* Dark background for contrast */
     color: white; /* White text for readability */
 }
-/* Section Styles */
+
 /* Section Styles */
 .intro-section {
-    position: relative; /* Ensures the video and content are positioned correctly */
-    height: 100vh;
+    position: relative;
+    height: 100vh; /* Full height of the viewport */
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Prevents the video from overflowing */
+    overflow: hidden; /* Prevent video overflow */
 }
 
 .intro-section video {
-    position: absolute; /* Positions the video behind the content */
-    top: 50%; /* Center the video vertically */
-    left: 50%; /* Center the video horizontally */
-    width: 100%; /* Make the video width cover 100% of the section */
-    height: 100%; /* Make the video height cover 100% of the section */
-    object-fit: cover; /* Ensure the video scales and covers the section without distortion */
-    transform: translate(-50%, -50%); /* Centers the video */
-    z-index: -1; /* Keeps the video in the background */
+    position: absolute; /* Position the video behind content */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure video covers the entire section */
+    height: 100%; /* Ensure video fills the entire section */
+    object-fit: cover; /* Preserve aspect ratio and cover the section */
+    z-index: -1; /* Ensure video stays in the background */
 }
 
 .content {
     max-width: 800px;
     text-align: center;
-    color: white; /* Set text color to white for contrast against the video */
-    z-index: 1; /* Make sure content appears above the video */
+    color: white; /* Text color for contrast */
+    z-index: 1; /* Ensure content stays above video */
 }
 
 
