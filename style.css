@@ -77,7 +77,7 @@ body {
 
 /* Section Styles */
 .intro-section {
-    position: relative;
+    position: relative; /* Ensure the video and content are positioned correctly */
     height: 100vh; /* Full height of the viewport */
     display: flex;
     align-items: center;
@@ -86,21 +86,23 @@ body {
 }
 
 .intro-section video {
-    position: absolute; /* Position the video behind content */
+    position: absolute; /* Position the video behind the content */
     top: 0;
     left: 0;
-    width: 100%; /* Ensure video covers the entire section */
-    height: 100%; /* Ensure video fills the entire section */
-    object-fit: cover; /* Preserve aspect ratio and cover the section */
-    z-index: -1; /* Ensure video stays in the background */
+    width: 100%; /* Make the video stretch to full width */
+    height: 100%; /* Make the video fill the entire section */
+    object-fit: cover; /* Ensure the video covers the entire section without stretching */
+    object-position: center center; /* Position the video in the center */
+    z-index: -1; /* Ensure the video stays behind the content */
 }
 
 .content {
     max-width: 800px;
     text-align: center;
     color: white; /* Text color for contrast */
-    z-index: 1; /* Ensure content stays above video */
+    z-index: 1; /* Ensure content stays above the video */
 }
+
 
 
 
