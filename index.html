@@ -1,436 +1,438 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vennila G - IT Professional Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Vennila Portfolio</title>
+  <link rel="icon" type="image/jpeg" class="logo" href="https://res.cloudinary.com/dmjwhclog/image/upload/v1733849247/logo2_votprz.jpg">
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f4f8;
-            color: #333;
-            overflow-x: hidden;
-        }
-
-        /* Moving IT-Themed Background */
-        .moving-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://www.transparenttextures.com/patterns/virus.png');
-            background-repeat: repeat;
-            z-index: -1;
-            animation: moveBackground 20s infinite linear;
-        }
-
-        @keyframes moveBackground {
-            0% {
-                background-position: 0 0;
-            }
-
-            100% {
-                background-position: 100% 100%;
-            }
-        }
-
-        /* Header Section */
-        header {
-            background: linear-gradient(to right, #4e73df, #1cc88a);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        header h1 {
-            font-size: 60px;
-            color: #ffffff;
-            font-weight: bold;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        header p {
-            font-size: 20px;
-            margin-top: 10px;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        /* Fade-in Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Navbar */
-        .navbar {
-            background-color: #333;
-            padding: 1rem 0;
-        }
-
-        .navbar-nav .nav-link {
-            color: #fff;
-            font-size: 18px;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
-
-        .navbar-nav .nav-link:hover {
-            color: #1cc88a;
-        }
-
-        .navbar-brand {
-            color: #4e73df;
-            font-size: 24px;
-            font-weight: 700;
-        }
-
-        /* About Section */
-        #about {
-            padding: 80px 0;
-            background-color: #fff;
-            animation: fadeIn 3s ease-in-out;
-        }
-
-        #about h2 {
-            color: #4e73df;
-            text-align: center;
-            font-size: 36px;
-        }
-
-        #about p {
-            font-size: 18px;
-            color: #555;
-            text-align: center;
-            line-height: 1.6;
-        }
-
-        /* Skills Section */
-        #skills {
-            padding: 80px 0;
-            background-color: #f7f7f7;
-            animation: fadeIn 4s ease-in-out;
-        }
-
-        #skills h2 {
-            color: #4e73df;
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .skill-item {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 15px;
-            width: 250px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .skill-item:hover {
-            transform: scale(1.05);
-        }
-
-        .skill-item h4 {
-            color: #4e73df;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .skill-item p {
-            font-size: 16px;
-            color: #555;
-        }
-
-        /* Education Section */
-        #education {
-            padding: 80px 0;
-            background-color: #fff;
-            animation: fadeIn 5s ease-in-out;
-        }
-
-        #education h2 {
-            color: #4e73df;
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
-
-        .education-item {
-            margin-bottom: 30px;
-        }
-
-        .education-item h5 {
-            color: #4e73df;
-            font-size: 24px;
-        }
-
-        .education-item p {
-            font-size: 18px;
-            color: #555;
-        }
-
-        /* Contact Section */
-        #contact {
-            padding: 80px 0;
-            background-color: #f7f7f7;
-            animation: fadeIn 6s ease-in-out;
-        }
-
-        #contact h2 {
-            color: #4e73df;
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
-
-        #contact form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        #contact .form-group label {
-            color: #555;
-        }
-
-        #contact .form-control {
-            border-radius: 5px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            margin-bottom: 20px;
-        }
-
-        #contact .form-control:focus {
-            border-color: #4e73df;
-            box-shadow: 0 0 5px rgba(78, 115, 223, 0.5);
-        }
-
-        #contact .btn {
-            background-color: #4e73df;
-            color: white;
-            font-size: 18px;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            width: 100%;
-            transition: background-color 0.3s ease;
-        }
-
-        #contact .btn:hover {
-            background-color: #375a7f;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        /* Smiley Emoji Animation */
-        .smiley-emoji {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 50px;
-            animation: smileyAnimation 1s infinite alternate;
-        }
-
-        @keyframes smileyAnimation {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        /* Full color for name */
-        .name {
-            font-size: 60px;
-            color: #1cc88a;
-            font-weight: bold;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .name:hover {
-            color: #4e73df;
-            cursor: pointer;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 45px;
-            }
-
-            header p {
-                font-size: 18px;
-            }
-
-            #about h2,
-            #skills h2,
-            #education h2,
-            #contact h2 {
-                font-size: 28px;
-            }
-
-            .skill-item {
-                width: 200px;
-            }
-        }
-    </style>
+  <!-- JavaScript Files -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+          integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" 
+          integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" 
+          integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
-
-    <!-- Moving Background -->
-    <div class="moving-background"></div>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">Vennila G</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header>
-        <div class="container">
-            <h1 class="name">Vennila G</h1>
-            <p>A Passionate IT Professional & Data Science </p>
-        </div>
-    </header>
-
-    <!-- Smiley Emoji Animation -->
-    <div class="smiley-emoji">
-        😊
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top p-4">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://res.cloudinary.com/dmjwhclog/image/upload/v1733513875/WhatsApp_Image_2024-12-06_at_11.39.47_AM_ucnfvd.jpg" class="nav-image" alt="Logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
+              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#lan">LANGUAGES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">EDUCATION</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" 
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              EXTRAS
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="certificate.html">Certificates</a>
+              <a class="dropdown-item" href="#">Contact</a>
+              <a class="dropdown-item" href="#">Resume</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>Career Objective</h2>
-            <p>To advance my career by obtaining a position where I can utilize my knowledge, skills, and experience in
-                troubleshooting, system administration, and technical support, while contributing to the growth of the
-                organization.</p>
-        </div>
-    </section>
+  <!-- Introduction Section -->
+  <section  id="home" class="intro-section">
+    <div class="content">
+      <div class="main-content">
+        <h1 data-aos="fade-right" data-aos-duration="1500">Hi! I'm</h1>
+        <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200" class="h11">VENNILA G</h1>
+      </div>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <div class="skill-list">
-                <div class="skill-item">
-                    <h4>Operating Systems</h4>
-                    <p>Linux (CentOS, RedHat, Rocky), Windows</p>
+  <!-- AOS Initialization -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
+  <!-- About Section -->
+  <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full shadow-lg rounded border border-primary">
+            <div class="row">
+              <!-- Left Side: Image and Info -->
+              <div class="col-md-6 d-flex flex-column justify-content-start">
+                <div class="row d-flex flex-row justify-content-start">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="about-img m-2 p-2">
+                      <img src="https://res.cloudinary.com/dmjwhclog/image/upload/v1733766462/pic_czbwjp.jpg" class="img-fluid rounded b-shadow-a" alt="Vennila G">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info m-3 mt-5">
+                      <p><span class="title-s">Name: </span> <span class="title-p">Vennila G</span></p>
+                      <p><span class="title-s">Email: </span> <span class="title-p">vennilavennila472@gmail.com</span></p>
+                      <p><span class="title-s">Phone: </span> <span class="title-p">+91-961 199 8261</span></p>
+                      <p>
+                        <span class="title-s">Github: </span>
+                        <a href="https://github.com/vennivennila" class="title-p" target="_blank">
+                          <i class="fab fa-github"></i>
+                        </a>
+                      </p>
+                      <p>
+                        <span class="title-s">LinkedIn: </span>
+                        <a href="https://www.linkedin.com/in/vennila-g-338363254" class="title-p" target="_blank">
+                          <i class="fab fa-linkedin"></i>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div class="skill-item">
-                    <h4>Programming Languages</h4>
-                    <p>HTML, CSS, Python</p>
-                </div>
-                <div class="skill-item">
-                    <h4>Tools & Technologies</h4>
-                    <p>Bootstrap, Visual Studio, VMware</p>
-                </div>
+                
+               <!-- Skills Section -->
+    <section class="skills-section p-3">
+      <div class="container">
+          <h2 class="mb-2">Skills</h2>
+          <div class="row">
+              <div class="col-md-6">
+                  <h5>Linux</h5>
+                  <div class="progress mb-3">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 80%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">80%</div>
+                  </div>
+
+                  <h5>Docker</h5>
+                  <div class="progress mb-3">
+                      <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">70%</div>
+                  </div>
+                  
+                  <h5>Kubernetes</h5>
+                  <div class="progress mb-3">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 75%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">75%</div>
+                  </div>
+
+                  <h5>Python</h5>
+                  <div class="progress mb-3">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                  </div>
+
+                  <h5>MySQL</h5>
+                  <div class="progress mb-3">
+                      <div class="progress-bar bg-dark" role="progressbar" style="width: 50%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">50%</div>
+                  </div>
+
+              </div>
+
+              <div class="col-md-6">
+                  <h5>HTML/CSS</h5>
+                  <div class="progress mb-3">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 70%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">70%</div>
+                  </div>
+
+                  <h5>Bootstrap</h5>
+                  <div class="progress mb-3">
+                      <div class="progress-bar bg-dark" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+                  </div>
+
+                  <h5>SSH, PuTTY, MobaXterm</h5>
+                  <div class="progress mb-3">
+                      <div class="progress-bar bg-secondary" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                  </div>
+
+                  <h5>Visual Studio</h5>
+                  <div class="progress mb-3">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 70%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">70%</div>
+                  </div>
+
+                  <h5>Hypervisor</h5>
+                  <div class="progress mb-3">
+                      <div class="progress-bar bg-primary" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+                  </div>
+              </div>
+      
             </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h5>Bachelor of Vocation</h5>
-                <p>Dayananda Sagar University, 2024 | CGPA: 9.3</p>
-            </div>
-            <div class="education-item">
-                <h5>Diploma in IT & Data Science</h5>
-                <p>Nettur Technical Training Foundation, 2024 | CGPA: 9.24</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form>
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+          </div>
+  </section>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                </div>
-                <button type="submit" class="btn">Submit</button>
-            </form>
+                
+                <!-- Right Side: About Me -->
+      <div class="col-md-6">
+        <div class="about-me pt-md-0">
+          <div class="title-box-2">
+            <h1 class="title-left pt-5 pb-2">About Me</h1>
+          </div>
+          <p class="lead">
+            Hello, I'm <b>Vennila G</b>, a passionate and dedicated <b>Computer Science enthusiast</b> from <b>Bangalore</b>, India. I have completed a <b>Bachelor of Vocation Degree (B.Voc) </b> from <b>Dayananda Sagar University</b>, Bangalore, where I graduated with a <b>cumulative percentage of 9.3</b>. Alongside my degree, I also pursued a <b>Diploma in Information Technology and Data Science</b> from <b>Nettur Technical Training Foundation</b>, Electronic City, which provided me with a solid foundation in both <b>theoretical and practical aspects</b> of the tech world.
+          </p>
+          <p class="lead">
+            Throughout my academic journey, I have skills in <b>programming languages</b> such as <b>HTML</b>, <b>CSS</b>, <b>Bootstrap</b>, <b>Kubernetes</b>, <b>Python</b>,<b>Docker</b>, and <b>Linux</b>, and have gained hands-on experience with <b>tools</b> like <b>Visual Studio</b> and <b>Hypervisor</b>. I have a  interest in <b>front-end development</b> and have successfully built several <b>static and responsive websites</b>
+          </p>
+          <p class="lead">
+            My passion for <b>continuous learning</b> drives me to stay updated with the latest technologies and best practices in the industry.I'm excited to use my skills on creative projects and work with others who share my passion for technology.
+           </p>
+          
+          
         </div>
-    </section>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Vennila G. All rights reserved.</p>
-    </footer>
+ <!--language section-->
+ <section id="lan" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Languages & Tools</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Linux -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" class="card-img-top" alt="Linux Logo">
+          <div class="card-body">
+            <div class="text-center">
+              <h5 class="card-title">Linux</h5>
+            </div>
+            <p class="op">Open-source OS widely used for development and servers.</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%;">80%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Docker -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" class="card-img-top" alt="Docker Logo">
+          <div class="card-body">
+            <div class="text-center">
+              <h5 class="card-title">Docker</h5>
+            </div>
+            <p class="op">Containerization platform for efficient deployments.</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%;">70%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Kubernetes -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" class="card-img-top" alt="Kubernetes Logo">
+          <div class="card-body">
+            <div class="text-center">
+              <h5 class="card-title">Kubernetes</h5>
+            </div>
+            <p class="op">Automates managing and scaling containerized apps.</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%;">75%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+      <!-- Python -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" class="card-img-top" alt="Python Logo">
+          <div class="card-body">
+            <div class="text-center">
+              <h5 class="card-title">Python</h5>
+            </div>
+            <p class="op">Versatile programming language for multiple applications.</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%;">75%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MySQL -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://res.cloudinary.com/dmjwhclog/image/upload/v1733844189/mysql_vrdpuy.png" class="card-img-top" alt="MySQL Logo">
+          <div class="card-body">
+            <div class="text-center">
+              <h5 class="card-title">MySQL</h5>
+            </div>
+            <p class="op">Database management system for structured data.</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%;">50%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- HTML -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" class="card-img-top" alt="HTML Logo">
+          <div class="card-body">
+            <div class="text-center">
+              <h5 class="card-title">HTML</h5>
+            </div>
+            <p class="op">Standard language for creating web pages.</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%;">70%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+      <!-- CSS -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="card-img-top" alt="CSS Logo">
+          <div class="card-body">
+            <div class="text-center">
+              <h5 class="card-title">CSS</h5>
+            </div>
+            <p class="op">Stylesheet language for designing web pages.</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%;">70%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bootstrap -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" class="card-img-top" alt="Bootstrap Logo">
+          <div class="card-body">
+            <div class="text-center">
+              <h5 class="card-title">Bootstrap</h5>
+            </div>
+            <p class="op">CSS framework for building responsive websites.</p>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%;">70%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+                
+  <!-- ======= Education Section ======= -->
+  <section id="education" class="services-mf pb-5 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Education
+            </h3>
+            <p class="subtitle-a">
+              Educational Qualifications
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Degree in Bachelor of Vocation -->
+        <div class="col-md-6">
+          <div class="education-card shadow-sm p-3 mb-5 bg-white rounded">
+            <h5 class="card-header bg-primary text-white">Dayananda Sagar University</h5>
+            <div class="card-body">
+              <h5 class="card-title">Degree in Bachelor of Vocation</h5>
+              <p class="card-text">University: Dayananda Sagar University</p>
+              <p class="card-text">Year of Passing: 2024</p>
+              <p class="card-text">Percentage: 9.39%</p>
+            </div>
+          </div>
+        </div>
+        <!-- Diploma in IT and Data Science -->
+        <div class="col-md-6">
+          <div class="education-card shadow-sm p-3 mb-5 bg-white rounded">
+            <h5 class="card-header bg-primary text-white">Nettur Technical Training Foundation</h5>
+            <div class="card-body">
+              <h5 class="card-title">Diploma in IT and Data Science</h5>
+              <p class="card-text">Board: Autonomous</p>
+              <p class="card-text">Year of Passing: 2024</p>
+              <p class="card-text">Percentage: 9.24%</p>
+            </div>
+          </div>
+        </div>
+        <!-- 12th in PCMC -->
+        <div class="col-md-6">
+          <div class="education-card shadow-sm p-3 mb-5 bg-white rounded">
+            <h5 class="card-header bg-primary text-white">St. Francis PU College</h5>
+            <div class="card-body">
+              <h5 class="card-title">12th in PCMC</h5>
+              <p class="card-text">Board: Karnataka State Board</p>
+              <p class="card-text">Year of Passing: 2021</p>
+              <p class="card-text">Percentage: 86%</p>
+            </div>
+          </div>
+        </div>
+        <!-- 10th -->
+        <div class="col-md-6">
+          <div class="education-card shadow-sm p-3 mb-5 bg-white rounded">
+            <h5 class="card-header bg-primary text-white">Anikethan Public School</h5>
+            <div class="card-body">
+              <h5 class="card-title">10th</h5>
+              <p class="card-text">Board: Karnataka State Board</p>
+              <p class="card-text">Year of Passing: 2019</p>
+              <p class="card-text">Percentage: 85%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+ <!-- ======= Footer Section ======= -->
+<footer class="footer">
+  <div class="container text-center">
+    <p class="text-white">
+      Designed and Developed by <strong>Vennila G</strong>
+    </p>
+  </div>
+  <!-- Back to Top Button -->
+  <a href="#top" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+</footer>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Optional: Add an anchor at the top for scrolling -->
+<a href="#top" id="top" style="position: absolute; top: 0;"></a>
+<!-- Add this script tag just before the closing </body> tag -->
+<script>
+  window.addEventListener("scroll", function() {
+    var backToTopBtn = document.querySelector(".back-to-top");
+    if (window.scrollY > 200) {  /* Button appears after 200px scroll */
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+</script>
 </body>
-
 </html>
