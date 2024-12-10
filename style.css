@@ -77,16 +77,30 @@ body {
 
 /* Section Styles */
 .intro-section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url("https://res.cloudinary.com/dmjwhclog/image/upload/v1733853601/bg_yniekl.jpg");
-    background-size: cover;
+  position: relative; /* Ensures the video and content are positioned correctly */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents the video from overflowing */
 }
+
+.intro-section video {
+  position: absolute; /* Positions the video behind the content */
+  top: 50%; /* Center the video vertically */
+  left: 50%; /* Center the video horizontally */
+  width: 100%; /* Make the video width cover 100% of the section */
+  height: 100%; /* Make the video height cover 100% of the section */
+  object-fit: cover; /* Ensure the video scales and covers the section without distortion */
+  transform: translate(-50%, -50%); /* Centers the video */
+  z-index: -1; /* Keeps the video in the background */
+}
+
 .content {
-    max-width: 800px;
-    text-align: center;
+  max-width: 800px;
+  text-align: center;
+  color: white; /* Set text color to white for contrast against the video */
+  z-index: 1; /* Make sure content appears above the video */
 }
 
 /* Heading Styles */
