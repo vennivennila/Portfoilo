@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+.logo {
+    height: 50px; /* Adjust height */
+    width: auto;
+    border-radius: 100%;
+}
+
+/* Navbar and Background Unified Styling */
+
+.custom-navbar {
+  background-color: black !important;  /* Make the navbar background transparent */
+  box-shadow: none;  /* Remove the shadow if you want a clean, transparent effect */
+  z-index: 1000; /* Ensure it stays on top of other content */
+  transition: background-color 0.3s ease-in-out;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.nav-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.navbar .nav-link {
+    color: rgb(253, 246, 246) !important;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    padding: 10px 15px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: orange !important;
+    transform: scale(1.1);
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    color: black !important;
+    background-color: rgba(246, 244, 244, 0.996) !important; /* Background for dropdown items */
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #ff5733 !important; /* Orange background on hover */
+    color: white !important;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.navbar .dropdown-menu .dropdown-item.active, 
+.navbar .dropdown-menu .dropdown-item:focus {
+    background-color: #c0392b !important; /* Darker red background when clicked */
+    color: white !important;
+}
+
+/* Transition for Navbar Background on Scroll */
+.custom-navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9); /* Slightly darker on scroll */
+}
+
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #121212; /* Dark background for contrast */
+    color: white; /* White text for readability */
+}
+
+/* Section Styles */
+.intro-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://res.cloudinary.com/dmjwhclog/image/upload/v1733853601/bg_yniekl.jpg");
+    background-size: cover;
+}
+.content {
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #fdfdfd; /* Bright yellow for attention */
+    text-shadow: 2px 2px 5px rgb(242, 237, 237); /* Subtle shadow effect */
+}
+
+/* Name Styles */
+
+.h11{
+  font-size: 40px;
+    font-weight: bold;
+    color: #06ccf8; /* Pure white */
+    text-shadow: 1px 1px 3px rgba(253, 249, 249, 0.963); /* Slight shadow */
+    display: block;
+    margin-bottom: 15px;
+}
+/* Paragraph Styles */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #dddddd; /* Light gray for contrast */
+}
+
+/* AOS Animation Enhancements */
+[data-aos] {
+    transition: all 0.5s ease-in-out;
+}
+
+/* About Section Styling */
+.about-mf {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #ffffff;
+}
+
+.box-shadow-full {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 25px;
+    border: 3px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-info p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+.title-l{
+    color:#0e0e0f;
+    font-weight: bold;
+    font-size: 18px;
+}
+.title-s, span {
+    display: inline-block;
+    margin-right: 10px; 
+    /* Optional: Adds spacing between the elements */
+    font-weight: bold;
+    color: #101010;
+    font-size: 15px;
+}
+.title-p {
+    font-weight: 500;
+    color: #101010;
+    font-size: 14px;
+}
+.title-q {
+    font-weight: bold;
+    color: #101010;
+    font-size: 20px;
+}
+.title-p:hover {
+    color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+
+.title-left {
+    font-size: 30px;
+    color: #0e0e0f;
+    font-weight: bold;
+}
+
+.about-me p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #0a0909e5;
+    margin-right: 20px;
+}
+
+.about-me .lead {
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.skill-mf {
+    margin-top: 3px;
+}
+
+.skill-mf .title-s {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #0078ff;
+}
+
+.progress {
+    height: 3px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #e0e0e0;
+}
+
+.progress-bar {
+    background-color: #0078ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-mf {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .box-shadow-full {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-img img {
+        width: 80%;
+    }
+
+    .about-info p {
+        font-size: 14px;
+    }
+
+    .about-me .lead {
+        font-size: 16px;
+    }
+    .col-md-6 {
+        margin-bottom: 20px; /* Adds space between columns on smaller screens */
+    }
+}
+.skills-section h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.progress-bar {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* languaage section*/
+/* File: styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #33050a;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    color: #000000;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #0c0c0c;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    color: #000910;
+  }
+  
+  .progress-bar {
+    background-color: #28a745;
+  }
+  .op{
+    color:rgb(71, 107, 127);
+  }
+  
+/*education*/
+/* File: styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  h3.title-a {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000306;
+    text-transform: uppercase;
+  }
+  
+  .subtitle-a {
+    color: #6c757d;
+    font-size: 1rem;
+  }
+  
+  .line-mf {
+    width: 60px;
+    height: 4px;
+    margin: 20px auto;
+    background-color: #007bff;
+  }
+  
+  .education-card {
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .education-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-header {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    color: #495057;
+  }
+  
+  .bg-primary {
+    background-color: #007bff !important;
+  }
+  
+  .text-white {
+    color: white !important;
+  }
+  
+  
+  /* Footer Section */
+.footer {
+    background-color: #0062d3; /* Blue color */
+    padding: 40px 0; /* Adjust footer height */
+    color: white; /* White text */
+    text-align: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .footer .container {
+    margin: 0 auto;
+  }
+  
+  /* Back to Top Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;  /* Button placed just above the footer */
+    right: 20px;   /* Right aligned */
+    background-color: #ffffff; /* White background */
+    color: #0062d3; /* Blue text color */
+    padding: 15px;
+    border-radius: 80%; /* Circular shape */
+    font-size: 20px; /* Size of the icon */
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+    display: none; /* Hidden by default */
+  }
+  
+  .back-to-top:hover {
+    background-color: #0062d3; /* Change background on hover */
+    color: #ffffff; /* White icon on hover */
+    transform: scale(1.1); /* Slightly enlarge the button */
+  }
+  
+  /* Show the back-to-top button when user scrolls down */
+  .back-to-top.show {
+    display: block;
+  }
+  
+  /* Footer Text Styling */
+  .footer .text-white {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .footer {
+      padding: 30px 0;
+    }
+    .back-to-top {
+      bottom: 20px;  /* Adjust positioning for smaller screens */
+      right: 20px;
+    }
+  }
+  
+  
