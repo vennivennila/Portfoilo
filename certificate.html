@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates - Vennila</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            padding-top: 20px;
+            text-align: center;
+        }
+        h3,h2{
+            font-weight: bold;
+            color: #068ff1;
+            font-size: 20px;
+        }
+        p{
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+            animation: fadeInDown 1.5s ease-out;
+            background: linear-gradient(135deg, #1485d0, #09d7e6);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            width: 100%; /* Ensuring full-width for centering */
+        }
+
+        /* Text animation */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .certificate-card {
+            width: 320px;
+            background: #fff;
+            color: #333;
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 30px;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-body h5 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .card-body p {
+            font-size: 0.95rem;
+        }
+
+        .card-footer {
+            background: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.85rem;
+            border-top: 1px solid #ccc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #1e3c72;
+            color: #f9f9f9;
+            font-size: 0.8rem;
+            margin-top: 50px;
+        }
+
+        .footer-link {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .certificate-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Certificates - Vennila</h1>
+    <div class="container">
+        <div class="card-container">
+            <!-- Certificate 1 - Microsoft Azure Fundamentals -->
+            <div class="certificate-card">
+                <div class="card-header">
+                    <img src="https://res.cloudinary.com/dmjwhclog/image/upload/v1733854998/azure_ihlfus.jpg" alt="Microsoft Azure Fundamentals Certificate">
+                </div>
+                <div class="card-body">
+                    <h3>Microsoft Certified: Azure Fundamentals</h3>
+                    <p>
+                        Vennila G successfully completed the Microsoft Certified: Azure Fundamentals course.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p><strong>Certificate issued by:</strong> Microsoft</p>
+                    <p><strong>Certificate issued Date:</strong> Jan. 15, 2022</p>
+                    <p><strong>Certificate Validity:</strong> Life Long</p>
+                </div>
+            </div>
+
+            <!-- Certificate 2 - Basics of Python -->
+            <div class="certificate-card">
+                <div class="card-header">
+                    <img src="https://res.cloudinary.com/dmjwhclog/image/upload/v1733855020/python_i0g9zq.jpg" alt="Basics of Python Certificate">
+                </div>
+                <div class="card-body">
+                    <h2>Basics of Python</h2>
+                    <p>
+                        Vennila G successfully completed the course "Basics of Python" on October 19, 2022.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p><strong>Certificate issued by:</strong> Infosys</p>
+                    <p><strong>Certificate issued Date:</strong> Oct. 19, 2022</p>
+                    <p><strong>Certificate Validity:</strong> Life Long</p>
+                </div>
+            </div>
+
+            <!-- Certificate 3 - Introduction to Machine Learning -->
+            <div class="certificate-card">
+                <div class="card-header">
+                    <img src="https://res.cloudinary.com/dmjwhclog/image/upload/v1733855015/ml_cqq8rf.jpg" alt="Machine Learning Certificate">
+                </div>
+                <div class="card-body">
+                    <h3>Introduction to Machine Learning</h3>
+                    <p>
+                        Vennila G successfully completed the course "Introduction to Machine Learning" on September 1, 2022.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <p><strong>Certificate issued by:</strong> Infosys</p>
+                    <p><strong>Certificate issued Date:</strong> Oct. 19, 2022</p>
+                    <p><strong>Certificate Validity:</strong> Life Long</p>
+                </div>
+            </div>
+
+            <!-- Add more certificates -->
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Vennila's Portfolio | <a href="#" class="footer-link">Back to Top</a>
+    </footer>
+</body>
+
+</html>
