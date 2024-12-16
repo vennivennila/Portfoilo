@@ -84,7 +84,9 @@ body {
     justify-content: center;
     overflow: hidden; /* Prevents the video from overflowing */
 }
-
+.colour{
+    color:orange;
+}
 .intro-section video {
     position: absolute; /* Positions the video behind the content */
     top: 50%; /* Center the video vertically */
